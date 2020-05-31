@@ -1,0 +1,28 @@
+#header {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4f82ce;
+    color: #FFFFFF
+}
+
+#footer {
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #4f82ce;
+    color: #FFFFFF
+}
+
+.delete-icon {
+    color: #e57373 !important
+}
+
+
+.delete-icon:hover {
+    color: #ef9a9a !important
+}
+
+.datepicker-row {
+    color: #000000 !important
+}

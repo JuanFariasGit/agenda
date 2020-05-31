@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="shortcut icon" href="{% static 'imagens/agenda.png' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/jquery.datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/template_site.css' %}">
+</head>
+<body>   
+    <header id="header">
+        <img src="{% static 'imagens/agenda.png' %}" alt="agenda" width="32">
+        <h4>AGENDA</h4>
+        <a class="btn" href="/logout">Sair</a>
+    </header>
+    {% block content %} 
+        <!--Conteudo Do Site-->
+    {% endblock %}
+    <footer id="footer">
+        Desenvolvido por Juan De Oliveira Farias
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'js/jquery.datetimepicker.full.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

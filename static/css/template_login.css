@@ -1,0 +1,46 @@
+body 
+{
+    background-image: url('../imagens/fundo-login.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+    padding: 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-login 
+{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    margin: 0px;
+    line-height: 30px;
+}
+
+.error {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 200px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+}
+
+.valid {
+    border-bottom:  1px solid #4f82ce !important;
+    border-bottom: 1px solid #4f82ce !important;
+    box-shadow: 0 1px 0 0 #4f82ce !important;
+}

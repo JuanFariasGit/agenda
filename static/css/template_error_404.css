@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4f82ce;
+}
+
+div {
+    font-weight: bold;
+    text-align: center;
+}

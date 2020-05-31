@@ -1,0 +1,38 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <h4>EVENTO</h4>    
+        <form action="submit" method="POST">{% csrf_token %}                 
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="input-field col l6 s12">
+                            <input type="text" name="titulo" id="titulo" class="validate" value="{{ evento.titulo }}">
+                            <label class="active" for="titulo">TÍTULO</label>
+                        </div>
+                        <div class="input-field col l4 s12 offset-l1">
+                            <input type="text" name="data_evento" id="data_evento" class="validate" value="{{ evento.get_data_evento }}" maxlength="16">
+                            <label class="active" for="data_evento">DATA E HORA</label>
+                        </div>
+                        <div class="input-field col l11 s12">
+                            <textarea id="descricao" name="descricao" class="materialize-textarea validate">{{ evento.descricao }}</textarea>
+                            <label class="active" for="descricao">DESCRIÇÃO</label>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <input type="text" id="local" name="local" class="materialize-textarea validate" value="{{ evento.local }}">
+                            <label class="active" for="local">LOCAL</label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id" value="{{ evento.id }}">
+                </div>
+                <div class="card-action">
+                    <button type="submit" class="btn blue lighten-2">SALVAR</button>
+                    <a href="/"><button type="button" class="btn red lighten-2">CANCELAR</button></a>
+                </div>
+            </div>
+        </form>                                 
+    </div>
+</div>
+{% endblock %}      

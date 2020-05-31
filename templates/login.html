@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="shortcut icon" href="{% static 'imagens/agenda.png' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/template_login.css' %}">
+</head>
+<body>
+    <div class="container-login">
+        <form action="submit" method="POST">{% csrf_token %}
+            <div class="logo">
+                <img src="{% static 'imagens/agenda.png' %}" alt="agenda" width="100">
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="username" id="username" class="validate">
+                <label for="username">Usuário</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" name="password" id="password" class="validate">
+                <label for="senha">Senha</label>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Entrar</button>
+            {% for message in messages %}
+                <div class="error">
+                    <p>{{ message }}</p>
+                </div>    
+            {% endfor %}
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

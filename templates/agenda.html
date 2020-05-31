@@ -1,0 +1,25 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+<a href="evento/" class="btn" style="margin-left: 0.75rem;">Novo Evento</a>
+<a href="historico/" class="btn" style="margin-left: 0.75rem;">Histórico</a>
+<h4 style="text-align: center;">AGENDAMENTOS</h4>
+<div class="row">
+    {% for evento in eventos %}
+    <div class="col s12 l4">                     
+        <div class="card">
+            <div class="card-content {% if evento.get_evento_atrasado %} red {% endif %} {% if evento.get_evento_que_falta_menos_de_1h %} yellow {% endif %}">
+                <span class="card-title">{{ evento.titulo }}</span>
+                <p><i class="material-icons prefix">event</i> {{ evento.data_evento }} <i class="material-icons prefix">location_on</i> {{ evento.local }}</p>
+                <br>
+                <p>{{ evento.descricao }}</p>
+            </div>
+            <div class="card-action">
+                <a href="evento/?id={{ evento.id }}"><span class="material-icons">edit</span>Modificar</a>
+                <a href="evento/delete/{{ evento.id }}" class="delete-icon"><span class="material-icons">delete</span>Deletar</a>
+            </div>
+        </div>                                 
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}      
